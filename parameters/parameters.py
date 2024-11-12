@@ -16,4 +16,4 @@ left_arm_motor = Motor(Port.D, Direction.COUNTERCLOCKWISE)
 right_arm_motor = Motor(Port.C)
 
 right_color_sensor = ColorSensor(Port.E)
-#left_color_sensor = ColorSensor(Port.F)
+left_color_sensor = ColorSensor(Port.F)
