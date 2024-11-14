@@ -1,12 +1,11 @@
+from parameters import drive_base, hub, right_motor, left_motor
 def turn(turn_degrees, Kp, Ki, Kd):
 
     hub.imu.reset_heading(0)
-    
     error = turn_degrees - hub.imu.heading()
     integral = 0
     last_error = 0
     scale = abs(turn_degrees / 10)
-    
     while abs(error) > 0.5:
         gyro = hub.imu.heading()
         error = turn_degrees - gyro
@@ -20,6 +19,5 @@ def turn(turn_degrees, Kp, Ki, Kd):
         last_error = error
         left_motor.run(correction)
         right_motor.run(-correction)
-        
     left_motor.brake()
     right_motor.brake()
