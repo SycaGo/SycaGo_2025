@@ -13,22 +13,25 @@ def drive(kp, ki, kd, set_point, speed, distance):
     last_error = 0
     left_motor.reset_angle(0)
     right_motor.reset_angle(0)
-
     hub.imu.reset_heading(0)
 
     scale = abs(set_point / 10)
     distance_passed = calculate_distance()
+    
     while distance_passed < distance:
         distance_passed = calculate_distance()
         error = set_point - hub.imu.heading()
         p = error * kp
         d = (error - last_error) * kd
         correction = p + d
+        
         if abs(hub.imu.heading()) >= (abs(set_point) - scale):
             integral += error
             i = integral * ki
-            correction = p + d + i
+            correction = p + i + d
+            
         last_error = error
         drive_base.drive(speed, correction)
+        
     left_motor.brake()
     right_motor.brake()
