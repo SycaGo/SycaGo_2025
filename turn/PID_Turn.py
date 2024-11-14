@@ -1,22 +1,25 @@
-from parameters import drive_base, hub, right_motor, left_motor
-def turn(set_point, Kp, Ki, Kd):
-    hub.imu.heading(0)
-    current_point = hub.imu.heading()
-    error = set_point - current_point
+def turn(turn_degrees, Kp, Ki, Kd):
+
+    hub.imu.reset_heading(0)
+    
+    error = turn_degrees - hub.imu.heading()
     integral = 0
     last_error = 0
-    while abs(error)>0.5:
-        current_point = hub.imu.heading()
-        error = set_point - current_point
+    scale = abs(turn_degrees / 10)
+    
+    while abs(error) > 0.5:
+        gyro = hub.imu.heading()
+        error = turn_degrees - gyro
         p = error * Kp
         d = (error - last_error) * Kd
         correction = p + d
-        if  current_point >= abs(set_point) - scale:
+        if gyro >= abs(turn_degrees) - scale:
             integral += error
             i = integral * Ki
             correction = p + i + d
         last_error = error
-        right_motor(correction)
-        left_motor(-correction)
+        left_motor.run(correction)
+        right_motor.run(-correction)
+        
     left_motor.brake()
     right_motor.brake()
