@@ -5,7 +5,7 @@ def calculate_distance():
     left_motor_angle = left_motor.angle()
     P = WHEEL_DIAMETER * 3.14192
     average_angle = (abs(right_motor_angle) + abs(left_motor_angle)) / 2
-    distance_driven = ((average_angle / 360) * P) * 10
+    distance_driven = ((average_angle / 360) * P) / 10
     return distance_driven
 
 def drive(kp, ki, kd, set_point, speed, distance):
