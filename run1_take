@@ -1,0 +1,48 @@
+from parameters import left_arm_motor, right_arm_motor, hub
+from pybricks.parameters import Stop
+from pybricks.tools import wait
+from PID_drive import drive
+from PID_Turn import turn
+
+#drive forward
+drive(2.5, 0, 10, 0, 900, 10)
+#turn right
+turn(30, 8, 0.005, 2)
+#drive forward
+drive(2.5, 0, 0, 0, 900, 10)
+#turn left
+turn(-45, 9.5, 0.012, 3)
+#drive forward
+drive(2.5, 0, 0, 0, 900, 10)
+#turn right
+turn(32, 8, 0.005, 2)
+#drive forward
+drive(2.5, 0, 0, 0, 900, 15)
+#drive backward
+drive(2.5, 0, 0, 0, -900, 15)
+#turn right
+turn(16, 9, 0.003, 2)
+#drive forward
+drive(2.5, 0, 0, 0, 900, 36)
+#drive backward
+drive(1.5, 0, 0, 0, -900, 12)
+#turn left
+turn(-40, 9.5, 0.012, 3)
+#drive backward
+drive(2.5, 0, 0, 0, -900, 40)
+drive(2.5, 0, 0, 0, -200, 4)
+#drive forward
+drive(2.5, 0, 0, 0, 900, 63)
+
+print(hub.imu.heading())
+
+
+
+#turn left  
+#turn(-45, 4.2, 0.003, 3.5)
+#drive forward
+#drive(2.5, 0.001, 1, 0, 900, 5)
+#turn left
+#turn(-90, 4.2, 0.003, 3.5)
+#drive forward
+#drive(2.5, 0.001, 1, 0, 900, 20)
