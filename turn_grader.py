@@ -55,7 +55,7 @@ def grader(wanted_angle, Kp, Ki, Kd):
 
 
     if 0 > overshoot > -1:
-        overshoot_coefficient = (1 - abs(overshoot)) * 1.6
+        overshoot_coefficient = (1 - abs(overshoot)) * 1
         if overshoot_coefficient > 1:
             overshoot_coefficient = 1
         overshoot_score = overshoot_max_score * overshoot_coefficient
@@ -70,7 +70,7 @@ def grader(wanted_angle, Kp, Ki, Kd):
     angle_left = abs(wanted_angle - masured_angle)
 
     if angle_left < 1:
-        error_grader_coefficient = (1 - angle_left) * 2
+        error_grader_coefficient = (1 - angle_left) * 1.2
         if error_grader_coefficient > 1:
             error_grader_coefficient = 1
     elif 1 <= angle_left <= 2.5:
@@ -83,7 +83,7 @@ def grader(wanted_angle, Kp, Ki, Kd):
 
     masured_time = masured_time / 1000
     if masured_time < 2.5:
-        time_coefficient = (2.5 - (masured_time)) * 3
+        time_coefficient = (2.5 - (masured_time)) * 0.9
         if time_coefficient > 1:
             time_coefficient = 1
     elif 2.5 <= masured_time <= 3.2:
@@ -132,7 +132,7 @@ average_score = 0
 for activation in range(repetation):
     timer.reset()
     timer.resume()
-    turn(90, 8, 0.001, 2)
+    turn(-60, 9, 0.003, 2)
     grader(goal_degrees, turn_Kp, turn_Ki, turn_Kd)
     average_score += total_score
     wait(1000)
