@@ -66,28 +66,20 @@ def grader(wanted_angle, Kp, Ki, Kd):
         overshoot_coefficient = 1
         overshoot_score = overshoot_max_score * overshoot_coefficient
 
-
-    angle_left = abs(wanted_angle - masured_angle)
+    max_error = 5
+    angle_left = min(max_error, abs(wanted_angle - masured_angle))
 
     if angle_left < 1:
-        error_grader_coefficient = (1 - angle_left) * 1.2
-        if error_grader_coefficient > 1:
-            error_grader_coefficient = 1
-    elif 1 <= angle_left <= 2.5:
-        error_grader_coefficient = abs(1 - (angle_left / 3))
+        error_grader_coefficient = 1
     else:
-        error_grader_coefficient = 0
+        error_grader_coefficient = (angle_left - 1) * (-1 / max_error) + 1
 
     angle_score = angle_max_score * error_grader_coefficient
     
 
     masured_time = masured_time / 1000
-    if masured_time < 2.5:
-        time_coefficient = (2.5 - (masured_time)) * 0.9
-        if time_coefficient > 1:
-            time_coefficient = 1
-    elif 2.5 <= masured_time <= 3.2:
-        time_coefficient = abs(1 - (masured_time / 3.4))
+    if masured_time < 2:
+        time_coefficient = (masured_time - 1) * (-1 / max_error) + 1
     else:
         time_coefficient = 0
 
