@@ -7,38 +7,25 @@ drive_base.straight(150,Stop.BRAKE)
 
 drive_base.turn(32 ,Stop.BRAKE,True)
 
-drive_base.straight(100,Stop.BRAKE)
+drive_base.straight(230,Stop.BRAKE)
 
 '''
 while True:
-    balls = hub.imu.heading()
-    print(balls)
+    angle = hub.imu.heading()
+    print(angle)
     '''
-#drive_base.turn(20 ,Stop.BRAKE,True)
+drive_base.turn(-50 ,Stop.BRAKE,True)
 
-#drive_base.straight(100,Stop.BRAKE,True)
+drive_base.straight(150,Stop.BRAKE,True)
 
-#drive_base.turn(-45,Stop.BRAKE,True)
+drive_base.turn(25,Stop.BRAKE,True)
 
-#drive_base.straight(10,Stop.BRAKE,True)
+drive_base.straight(170,Stop.BRAKE,True)
 
-#drive_base.turn(32,Stop.BRAKE,True)
+drive_base.straight(-270,Stop.BRAKE,True)
 
-#drive_base.straight(15,Stop.BRAKE,True)
+drive_base.turn(25,Stop.BRAKE,True)
 
-#drive_base.straight(-15,Stop.BRAKE,True)
+drive_base.straight(370,Stop.BRAKE,True)
 
-#drive_base.turn(16,Stop.BRAKE,True)
-
-#drive_base.straight(36,Stop.BRAKE,True)
-
-#drive_base.straight(-12,Stop.BRAKE,True)
-
-#drive_base.turn(-40,Stop.BRAKE,True)
-
-#drive_base.straight(-45,Stop.BRAKE,True)
-
-
-
-
-
+drive_base.straight(-800,Stop.BRAKE,True)
