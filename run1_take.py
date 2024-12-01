@@ -1,31 +1,27 @@
 from parameters import left_arm_motor, right_arm_motor,hub,drive_base
 from pybricks.parameters import Stop
 from pybricks.tools import wait
-drive_base.settings(300, turn_acceleration=275)
+from turn_general import turn_general
+from drive_general import drive_general
 
-drive_base.straight(150,Stop.BRAKE)
+drive_general(150, 300, True)
 
-drive_base.turn(32 ,Stop.BRAKE,True)
+turn_general(32, 275, True)
 
-drive_base.straight(230,Stop.BRAKE)
+drive_general(230, 300, True)
 
-'''
-while True:
-    angle = hub.imu.heading()
-    print(angle)
-    '''
-drive_base.turn(-50 ,Stop.BRAKE,True)
+turn_general(-50, 275, True)
 
-drive_base.straight(150,Stop.BRAKE,True)
+drive_general(150, 300, True)
 
-drive_base.turn(25,Stop.BRAKE,True)
+turn_general(25, 275, True)
 
-drive_base.straight(170,Stop.BRAKE,True)
+drive_general(170, 300, True)
 
-drive_base.straight(-270,Stop.BRAKE,True)
+drive_general(-270, 300, True)
 
-drive_base.turn(25,Stop.BRAKE,True)
+turn_general(25, 275, True)
 
-drive_base.straight(370,Stop.BRAKE,True)
+drive_general(370, 300, True)
 
-drive_base.straight(-800,Stop.BRAKE,True)
+drive_general(-800, 300, True)
