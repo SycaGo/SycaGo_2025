@@ -2,8 +2,6 @@ from parameters import left_arm_motor, right_arm_motor, hub, drive_base
 from pybricks.parameters import Stop
 from pybricks.tools import wait
 
-def drive_general(distance, speed, bool):
-    
-    drive_base.settings(straight_speed=speed)
-    drive_base.straight(distance, Stop.BRAKE, bool)
-
+def turn_general(turn_degrees, speed, bool):
+    drive_base.settings(turn_rate=speed)
+    drive_base.turn(turn_degrees, Stop.BRAKE, bool)
