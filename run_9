@@ -1,0 +1,10 @@
+from parameters import left_arm_motor, right_arm_motor,hub,drive_base
+from pybricks.parameters import Stop
+from pybricks.tools import wait
+from turn_general import turn_general
+from drive_general import drive_general
+
+drive_general(480, 250, True)
+drive_general(-245, 200, True)
+turn_general(-90, 275, True)
+drive_general(500, 250, True)
