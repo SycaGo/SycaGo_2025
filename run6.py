@@ -23,16 +23,16 @@ drive_general(-120, 350, True)
 # take Krill 3
 #reaset gyro
 hub.imu.reset_heading(0)
-turn_general(44, 275, True)
+turn_general(42, 275, True)
 drive_general(200, 350, True)
 drive_general(-130, 350, True)
 
 # turn to wall
-turn_general(-34, 275, True)
+turn_general(-38, 275, True)
 
 # forward the wall
 drive_general(330, 350, True)
-
+'''
 #reaset gyro
 hub.imu.reset_heading(0)
 
@@ -46,7 +46,8 @@ drive_general(-170, 350, True)
 turn_general(-80, 250, True)
 drive_general(-450, 350, True)
 turn_general(-28, 275, True)
-drive_general(180, 350, True)
+drive_general(220, 350, True)
 drive_general(-130, 350, True)
 turn_general(-30, 275, True)
 drive_general(-300 , 350, True)
+'''
