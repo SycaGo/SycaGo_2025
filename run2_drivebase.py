@@ -28,6 +28,8 @@ left_arm_motor.run_angle(3000, -600, Stop.BRAKE, True)
 turn_general(70, 350, True)
 drive_general(80, 300, True)
 
+hub.imu.reset_heading(0)
+
 #drop the shark
 left_arm_motor.run_angle(10000, 1250, Stop.BRAKE, True)
 drive_general(-60, 350, True)
@@ -39,8 +41,7 @@ drive_general(-700, 350, False)
 right_arm_motor.run_angle(2000, 300, Stop.BRAKE, True)
 right_arm_motor.reset_angle()
 
-
-wait(2000)
+wait(2500)
 
 #go back to mission 3
 drive_general(250, 300, True)
@@ -56,4 +57,5 @@ drive_general(250, 350, True)
 right_arm_motor.run_angle(2000, -1050, Stop.BRAKE, True)
 right_arm_motor.run_angle(2000, 800, Stop.BRAKE, True)
 drive_general(-200, 350, True)
+turn_general(-15, 350, True)
 drive_general(-550, 400, True)
