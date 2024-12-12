@@ -3,12 +3,23 @@ from pybricks.parameters import Stop
 from pybricks.tools import wait
 from drive_general import drive_general
 from turn_general import turn_general
-drive_general(870,300,True)
-drive_general(77,300,True)
-drive_general(-150,120,True)
-drive_general(-110,90,True)
+drive_general(880,250,True)
+drive_general(100,305,True)
+drive_general(-150,130,True)
+drive_general(-110,50,True)
 turn_general(-90,220,True)
 drive_general(-80,300,True)
 turn_general(-55,220,True)
 drive_general(-100,300,True)
 drive_general(-242,360,True)
+drive_general(270, 200, True)
+turn_general(90,150,True)
+drive_general(-40,200, True)
+drive_general(180,200, True)
+turn_general(40,150,True)
+drive_general(166,300,True)
+turn_general(50,150,True)
+drive_general(750,400,True)
+turn_general(-90,150,True)
+drive_general(-250,200,True)
+
