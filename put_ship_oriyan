@@ -1,25 +1,28 @@
+
 from parameters import left_arm_motor, right_arm_motor, hub, drive_base
 from pybricks.parameters import Stop
 from pybricks.tools import wait
 from drive_general import drive_general
 from turn_general import turn_general
 drive_general(880,250,True)
-drive_general(100,305,True)
-drive_general(-150,130,True)
-drive_general(-110,50,True)
+drive_general(100,340,True)
+drive_general(-160,100,True)
+drive_general(-130,55,True)
 turn_general(-90,220,True)
-drive_general(-80,300,True)
-turn_general(-55,220,True)
 drive_general(-100,300,True)
-drive_general(-242,360,True)
+turn_general(-55,220,True)
+drive_general(-130,300,True)
+drive_general(-250,360,True)
 drive_general(270, 200, True)
-turn_general(90,150,True)
-drive_general(-40,200, True)
-drive_general(180,200, True)
 turn_general(40,150,True)
-drive_general(166,300,True)
-turn_general(50,150,True)
-drive_general(750,400,True)
-turn_general(-90,150,True)
-drive_general(-250,200,True)
+drive_general(70, 200,True)
+turn_general(40,150,True)
+drive_general(-70,200, True)
+drive_general(200,200,True)
+turn_general(60,150,True)
+drive_general(200,300,True)
+turn_general(30,150,True)
+drive_general(1000,1000,True)
+turn_general(-90,300,True)
+drive_general(-100,1000,True)
 
