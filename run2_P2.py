@@ -1,4 +1,3 @@
-separate
 from parameters import left_arm_motor, right_arm_motor, hub, drive_base,
 from pybricks.parameters import Stop
 from pybricks.tools import wait
