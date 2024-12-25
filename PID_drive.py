@@ -6,10 +6,12 @@ def calculate_distance():
     left_motor_angle = left_motor.angle()
     P = WHEEL_DIAMETER * 3.14192
     average_angle = (abs(right_motor_angle) + abs(left_motor_angle)) / 2
-    distance_driven = ((average_angle / 360) * P) / 10
+    distance_driven = ((average_angle / 360) * P)
     return distance_driven
 
-def drive(kp, ki, kd, set_point, speed, distance):
+def drive(distance, speed):
+    set_point = 0
+    kp = 1.5
     integral = 0
     last_error = 0
     left_motor.reset_angle(0)
@@ -27,15 +29,7 @@ def drive(kp, ki, kd, set_point, speed, distance):
         distance_passed = calculate_distance()
         error = set_point - hub.imu.heading()
         p = error * kp
-        d = (error - last_error) * kd
-        correction = p + d
-        
-        if abs(hub.imu.heading()) >= (abs(set_point) - scale):
-            integral += error
-            i = integral * ki
-            correction = p + i + d
-            
-        last_error = error
+        correction = p
 
         if distance_passed < deceleration_starting_position:
             speed = max_speed
@@ -44,8 +38,8 @@ def drive(kp, ki, kd, set_point, speed, distance):
         
         drive_base.drive(speed, correction)
 
-
     left_motor.brake()
     right_motor.brake()
 
     wait(100)
+
