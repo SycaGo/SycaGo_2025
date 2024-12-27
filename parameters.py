@@ -9,8 +9,9 @@ left_motor = Motor(Port.B, Direction.COUNTERCLOCKWISE)
 right_motor = Motor(Port.A)
 
 WHEEL_DIAMETER = 62.4
-AXLE_TRACK = 124
+AXLE_TRACK = 110
 drive_base = DriveBase(left_motor, right_motor, WHEEL_DIAMETER, AXLE_TRACK)
+drive_base.use_gyro(True)
 
 left_arm_motor = Motor(Port.D, Direction.COUNTERCLOCKWISE)
 right_arm_motor = Motor(Port.C)
