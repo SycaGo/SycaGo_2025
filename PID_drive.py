@@ -1,7 +1,4 @@
-from parameters import left_motor, right_motor, hub, drive_base, WHEEL_DIAMETER
-from pybricks.parameters import Stop
-from pybricks.tools import wait
-
+from parameters import drive_base, hub, right_motor, left_motor, WHEEL_DIAMETER
 
 def calculate_distance():
     right_motor_angle = right_motor.angle()
@@ -11,19 +8,16 @@ def calculate_distance():
     distance_driven = ((average_angle / 360) * P)
     return distance_driven
 
-
-def drive_general(distance, speed):
+def drive(distance, speed):
     set_point = 0
-    kp = 1.5
-    integral = 0
-    last_error = 0
+    kp = 1
     left_motor.reset_angle(0)
     right_motor.reset_angle(0)
     hub.imu.reset_heading(0)
     scale = abs(set_point / 10)
     distance_passed = calculate_distance()
     
-    final_speed = 30
+    final_speed = speed / 2
     deceleration_starting_position = (distance / 3) * 2
     deceleration_range = distance - deceleration_starting_position
     max_speed = speed
