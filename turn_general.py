@@ -1,7 +1,28 @@
-from parameters import left_arm_motor, right_arm_motor, hub, drive_base
+from parameters import left_motor, right_motor, hub, drive_base
 from pybricks.parameters import Stop
 from pybricks.tools import wait
 
-def turn_general(turn_degrees, speed, dsync):
-    drive_base.settings(turn_rate=speed)
-    drive_base.turn(turn_degrees, Stop.BRAKE, dsync)
+def turn_general(turn_degrees):
+    Kp = 8
+    Ki = 0.003
+    Kd = 2
+    hub.imu.reset_heading(0)
+    error = turn_degrees - hub.imu.heading()
+    integral = 0
+    last_error = 0
+    scale = abs(turn_degrees / 10)
+    while abs(error) > 0.5:
+        gyro = hub.imu.heading()
+        error = turn_degrees - gyro
+        p = error * Kp
+        d = (error - last_error) * Kd
+        correction = p + d
+        if gyro >= abs(turn_degrees) - scale:
+            integral += error
+            i = integral * Ki
+            correction = p + i + d
+        last_error = error
+        left_motor.run(correction)
+        right_motor.run(-correction)
+    left_motor.brake()
+    right_motor.brake()
