@@ -14,16 +14,14 @@ def calculate_distance():
 
 def drive_general(distance, speed):
     set_point = 0
-    kp = 1.5
-    integral = 0
-    last_error = 0
+    kp = 1
     left_motor.reset_angle(0)
     right_motor.reset_angle(0)
     hub.imu.reset_heading(0)
     scale = abs(set_point / 10)
     distance_passed = calculate_distance()
     
-    final_speed = 30
+    final_speed = speed / 2
     deceleration_starting_position = (distance / 3) * 2
     deceleration_range = distance - deceleration_starting_position
     max_speed = speed
