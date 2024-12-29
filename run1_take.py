@@ -5,47 +5,45 @@ from turn_general import turn_general
 from drive_general import drive_general
 
 #take first coral
-drive_general(150, 350, True)
+drive_general(150, 350)
 
-turn_general(40, 350, True)
+turn_general(40)
 
-drive_general(270, 350, True)
+drive_general(220, 350)
 
 #take second coral
-turn_general(-46, 275, True)
+turn_general(-48)
 
-drive_general(130, 300, True)
+drive_general(130, 300)
 
 #take first shrimp
-turn_general(22, 100, True)
+turn_general(18)
 
-drive_general(190, 300, True)
+drive_general(170, 300)
 
 #Alignment on a wall
-turn_general(-20, 100, True)
+turn_general(-12)
 
-drive_general(280, 350, True)
+drive_general(300, 350)
 
 #take first water sample
-drive_general(-450, 300, True)
+drive_general(450, -300)
 
-turn_general(27, 275, True)
+turn_general(20)
 
-drive_general(310, 300, True)
-
+drive_general(280, 300)
 
 #take second water sample
-turn_general(53, 275, True)
+turn_general(30)
 
-drive_general(350, 300, True)
+drive_general(200, 300)
 
-turn_general(25, 275, True)
+turn_general(40)
 
-drive_general(50, 300, True)
+drive_general(280, 300)
 
-turn_general(-16, 275, True)
+turn_general(-30)
 
-drive_general(100, 300,True)
-'''
-#left_arm_motor.run_angle(300, -50, Stop.BRAKE, True)
-'''
+drive_general(50, 300)
+
+right_arm_motor.run_angle(15000, 2000, Stop.BRAKE, True )
