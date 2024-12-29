@@ -4,11 +4,12 @@ from pybricks.tools import wait
 from drive_general import drive_general
 from turn_general import turn_general
 drive_general(310,300)
-drive_general(42,-220)
+drive_general(40,-220)
 turn_general(-90)
-drive_general(510,400)
+drive_general(387,400)
 turn_general(-90)
-drive_general(400,200)
+turn_general(5)
+drive_general(475,700)
 drive_general(40,-600)
 turn_general(-90)
 drive_general(500,1000)
