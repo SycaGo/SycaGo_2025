@@ -4,35 +4,33 @@ from pybricks.tools import wait
 from drive_general import drive_general
 from turn_general import turn_general
 
-drive_general(310, 400)
+drive_general(320, 400)
 turn_general(30)
-drive_general(170, 350)
+drive_general(200, 350)
 turn_general(60)
 
 #drive forward to the mission
-drive_general(140, 250)
-drive_general(110, 70)
-drive_general(90, -300)
-turn_general(-110)
-right_arm_motor.run_angle(1000, -122, Stop.BRAKE, True)
+drive_general(100, 250)
+drive_general(100, 70)
+right_arm_motor.run_angle(100, 300, Stop.BRAKE, True)
+drive_general(180, -300)
+
+#put the srimp in the house
+turn_general(100)
+right_arm_motor.run_angle(10000, -300, Stop.BRAKE, True)
+turn_general(-10)
+
+#Alignment on a wall
+drive_general(400, -350)
 drive_general(100, 350)
-turn_general(-28)
-right_arm_motor.run_angle(1000, -30, Stop.BRAKE, True)
-drive_general(50, 350)
-
-#take the scubadiver
-right_arm_motor.run_angle(100, 150, Stop.BRAKE, True)
-
-turn_general(20)
-drive_general(150, -350)
-turn_general(50)
-drive_general(60, 350)
-turn_general(15)
-drive_general(70, 350)
-right_arm_motor.run_angle(100, -120, Stop.BRAKE, True)
+turn_general(-83)
+drive_general(140, 350)
+turn_general(-15)
 
 #put the scubadiver on the yellow line
-drive_general(30, 350)
+left_arm_motor.run_angle(5000, 900, Stop.BRAKE, True)
+left_arm_motor.run_angle(5000, -600, Stop.BRAKE, True)
+turn_general(-35)
+drive_general(140, -350)
 
-#go back home
-drive_general(700, -600)
+
