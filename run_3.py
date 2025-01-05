@@ -4,9 +4,9 @@ from pybricks.tools import wait
 from drive_general import drive_general
 from turn_general import turn_general
 
-drive_general(320, 400)
+drive_general(310, 400)
 turn_general(30)
-drive_general(200, 350)
+drive_general(170, 350)
 turn_general(60)
 
 #drive forward to the mission
