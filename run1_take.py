@@ -3,13 +3,15 @@ from pybricks.parameters import Stop
 from pybricks.tools import wait
 from turn_general import turn_general
 from drive_general import drive_general
-from line_alligment import line_alignment
 
-#mission 9
-drive_general(130, 400)
-turn_general(-30)
-drive_general(400,400)
-turn_general(-20)
-drive_general(150,400)
-turn_general(-15)
-line_alignment(350)
+drive_general(200, 450)
+turn_general(38)
+drive_general(500, 450)
+turn_general(27)
+drive_general(250, 450)
+right_arm_motor.run_angle(300, 400, Stop.BRAKE, True)
+turn_general(-65)
+drive_general(30, 350)
+right_arm_motor.run_angle(200, -400, Stop.BRAKE, True)
+right_arm_motor.run_angle(200, 400, Stop.BRAKE, True)
+turn_general(30)
