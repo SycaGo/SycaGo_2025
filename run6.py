@@ -3,23 +3,25 @@ from pybricks.parameters import Stop
 from pybricks.tools import wait
 from turn_general import turn_general
 from drive_general import drive_general
+from line_aligment import line_alignment
+#octupos
+drive_general(420, 400)
 
-#take Krill 1
-drive_general(160, 350)
-turn_general(-45)
-drive_general(240, 350)
-drive_general(70, -350)
+#take shrimps and coral
+drive_general(200, -400)
+left_arm_motor.run_angle(-300, 300, Stop.BRAKE, True)
+turn_general(42)
+drive_general(530, 400)
 
-# take Krill 2
-turn_general(35)
-drive_general(180, 350)
+#mission 13
+turn_general(-30)
+drive_general(40, -400)
+left_arm_motor.run_angle(200, 295, Stop.BRAKE, True)
+drive_general(50, -400)
+left_arm_motor.run_angle(200,-295, Stop.BRAKE, True)
+drive_general(70, 400)
 
-#take green Reef Segments
-turn_general(-20)
-drive_general(150, 350)
-
-# do the Sonar Discovery
-
-# take or not Krill 3
-
-# take Plankton Sample
+'''
+turn_general(40)
+drive_general(80, 400)
+'''
