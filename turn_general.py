@@ -4,7 +4,7 @@ from pybricks.tools import wait
 
 def turn_general(turn_degrees):
     Kp = 8
-    Ki = 0.003
+    Ki = 0.009
     Kd = 2
     hub.imu.reset_heading(0)
     error = turn_degrees - hub.imu.heading()
