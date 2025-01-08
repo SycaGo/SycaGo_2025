@@ -12,12 +12,14 @@ def calculate_distance():
     return distance_driven
 
 
-def drive_general(distance, speed):
-    set_point = 0
+def drive_general(distance, speed, set_point, absolute=True):
     kp = 1
     left_motor.reset_angle(0)
     right_motor.reset_angle(0)
-    hub.imu.reset_heading(0)
+
+    if !absolute:
+        hub.imu.reset_heading(0)
+
     scale = abs(set_point / 10)
     distance_passed = calculate_distance()
     
