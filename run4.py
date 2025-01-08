@@ -3,11 +3,11 @@ from pybricks.parameters import Stop
 from pybricks.tools import wait
 from turn_general import turn_general
 from drive_general import drive_general
-drive_general(220, 400, 0, False)
+drive_general(220, 400, 0, True)
 turn_general(30)
 drive_general(350, 400, 30, True)
 turn_general(-30)
-drive_general(450,400, -30, False)
+drive_general(450,400, -30, True)
 left_arm_motor.run_angle(400,270,Stop.BRAKE, True)
 drive_general(60,-30, -30, True)
 left_arm_motor.run_angle(510,100,Stop.BRAKE, True)
