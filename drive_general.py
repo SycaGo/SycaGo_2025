@@ -17,7 +17,7 @@ def drive_general(distance, speed, set_point, absolute=True):
     left_motor.reset_angle(0)
     right_motor.reset_angle(0)
 
-    if !absolute:
+    if not(absolute):
         hub.imu.reset_heading(0)
 
     scale = abs(set_point / 10)
