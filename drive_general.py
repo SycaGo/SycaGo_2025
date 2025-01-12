@@ -13,14 +13,13 @@ def calculate_distance():
 
 
 def drive_general(distance, speed, set_point, absolute=True):
-    kp = 1
+    kp = 1.2
+    kd = 0.2
     left_motor.reset_angle(0)
     right_motor.reset_angle(0)
-
+    last_error = 0
     if not(absolute):
         hub.imu.reset_heading(0)
-
-    scale = abs(set_point / 10)
     distance_passed = calculate_distance()
     
     final_speed = speed / 2
@@ -31,7 +30,8 @@ def drive_general(distance, speed, set_point, absolute=True):
         distance_passed = calculate_distance()
         error = set_point - hub.imu.heading()
         p = error * kp
-        correction = p
+        d = (error - last_error) * kd
+        correction = p + d
         if distance_passed < deceleration_starting_position:
             speed = max_speed
         else:
