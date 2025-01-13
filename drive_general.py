@@ -20,9 +20,14 @@ def drive_general(distance, speed, set_point, absolute=True):
     last_error = 0
     if not(absolute):
         hub.imu.reset_heading(0)
+
     distance_passed = calculate_distance()
     
-    final_speed = speed / 2
+    if speed <= 250:
+        final_speed = speed / 2
+    else:
+        final_speed = 100
+    
     deceleration_starting_position = (distance / 3) * 2
     deceleration_range = distance - deceleration_starting_position
     max_speed = speed
