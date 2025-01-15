@@ -4,14 +4,14 @@ from pybricks.tools import wait
 from drive_general import drive_general
 from turn_general import turn_general
 
-drive_general(140, 300, 0, False)
+drive_general(120, 300, 0, False)
 turn_general(-25)
 drive_general(120, 300, -25, True)
 turn_general(-65)
 
 #backward to the wall
-drive_general(70, -200, -65, True)
-drive_general(600, 450, -65, True)
+drive_general(70, -200, 0, False)
+drive_general(600, 450, 0, False)
 turn_general(-90)
 left_arm_motor.run_angle(3000, 860, Stop.BRAKE,True)
 
