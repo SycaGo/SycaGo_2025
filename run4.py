@@ -1,22 +1,22 @@
-from parameters import left_arm_motor, right_arm_motor,hub,drive_base
+from parameters import left_arm_motor, right_arm_motor, hub, drive_base
 from pybricks.parameters import Stop
 from pybricks.tools import wait
-from turn_general import turn_general
 from drive_general import drive_general
-drive_general(220, 400, 0, True)
-turn_general(30)
-drive_general(350, 400, 30, True)
-turn_general(-30)
-drive_general(450,400, -30, True)
-left_arm_motor.run_angle(400,270,Stop.BRAKE, True)
-drive_general(60,-30, -30, True)
-left_arm_motor.run_angle(510,100,Stop.BRAKE, True)
-drive_general(150,-30, -30, True)
-left_arm_motor.run_angle(500,-70,Stop.BRAKE, True)
-drive_general(50,400, -30, True)
-left_arm_motor.run_angle(500,70,Stop.BRAKE, True)
-turn_general(50)
-drive_general(700,-700, 50, True)
-turn_general(50)
-drive_general(50,700, 50, True)
+from turn_general import turn_general
+drive_general(40, 200 ,0, False)
+turn_general(90)
 
+#do mission 8
+drive_general(800, 400 ,90, True)
+drive_general(50, 320 ,90, True)
+drive_general(200, -60 ,90, True)
+drive_general(60, -200 ,90, True)
+turn_general(-60)
+drive_general(50, 200 ,-60, True)
+turn_general(-90)
+turn_general(20)
+drive_general(130, -300, 0, False)
+
+#put the ship in her place
+drive_general(300, -360, 0, False)
+drive_general(100, 400, 0, False)
