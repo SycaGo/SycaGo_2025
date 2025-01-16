@@ -1,27 +1,37 @@
-from parameters import left_arm_motor, right_arm_motor,hub,drive_base, right_motor, left_motor
+from parameters import left_arm_motor, right_arm_motor,hub,drive_base
 from pybricks.parameters import Stop
 from pybricks.tools import wait
 from turn_general import turn_general
 from drive_general import drive_general
+from line_alignment import line_alignment
 
-drive_general(200,500, 0, False)
-turn_general(-90)
-drive_general(495, 500, -90, True)
-turn_general(-90)
-drive_general(170, 300, -90, True)
-drive_general(10, -300, -90, True)
-drive_general(20, 400, -90, True)
-drive_general(100, -300, -90, True)
-turn_general(90)
-drive_general(200, -600, 90, True)
-turn_general(90)
-drive_general(320, -440, 90, True)
-drive_general(640, 500, 0, False)
+#mission 9
+drive_general(150, 150, 0, False)
+drive_general(80, 100, 0, False)
+drive_general(90, -400, 0, False)
+turn_general(-27)
+drive_general(490, 550, -27, True)
+turn_general(72)
+drive_general(350, 300, 72, True)
+wait(800)
+drive_general(20, -200, 72, True)
+drive_general(50, 400, 72, True)
+drive_general(20, -200, 72, True)
+drive_general(50, 400, 72, True)
+
+#mission 12
+drive_general(270, -300, 72, True)
+turn_general(-92)
+drive_general(150, 500, -92, True)
+turn_general(-25)
+drive_general(100, 300, -25, True)
+line_alignment(250)
+turn_general(-10)
+drive_general(10, -300, -10, True)
+right_arm_motor.run_angle(10000, -720, Stop.BRAKE, True)
+wait(500)
 turn_general(-50)
-right_arm_motor.run_angle(10000, 1300, Stop.BRAKE, True)
-drive_general(110, -400, -50, True)
-right_arm_motor.run_angle(-10000, 1300, Stop.BRAKE, True)
-turn_general(45)
-drive_general(200, -1000, 45, True)
-turn_general(-45)
-drive_general(550, -1000, -45, True)
+drive_general(70, 300, -50, True)
+turn_general(10)
+drive_general(50, 400, 10, True)
+drive_general(95, -400, 10, True)
