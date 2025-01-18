@@ -9,21 +9,21 @@ turn_general(90)
 #do mission 8
 drive_general(800, 400 ,90, True)
 drive_general(50, 320 ,90, True)
-drive_general(200, -60 ,90, True)
+drive_general(200, -50 ,90, True)
 drive_general(60, -200 ,90, True)
-turn_general(-55)
-drive_general(80, 200 ,-55, True)
+turn_general(-40)
+drive_general(70, 200 ,-40, True)
 
 #take the trident out
-turn_general(-70)
+turn_general(-30)
 
 #back to the wall
-drive_general(170, -450 ,-20, True)
-
-turn_general(-58)
-print(hub.imu.heading())
+drive_general(170, -2000 ,-25, True)
+turn_general(-70)
+drive_general(50, 400, 0, False)
+turn_general(-15)
 drive_general(130, -200, 0, False)
 
 #put the ship in her place
-drive_general(150, -300, 0, False)
+drive_general(270, -300, 0, False)
 drive_general(100, 400, 0, False)
