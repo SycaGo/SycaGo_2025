@@ -5,13 +5,12 @@ from turn_general import turn_general
 from drive_general import drive_general
 
 #take shrimps and coral
-drive_general(100, 250, 0, False)
-turn_general(-36)
-drive_general(150, 250, -36, True)
+drive_general(150, 250, 0, False)
+turn_general(-37)
+drive_general(150, 250, -37, True)
 turn_general(35)
 left_arm_motor.run_angle(300, 400, Stop.BRAKE, False)
-drive_general(500, 500, 35, True)
-print(hub.imu.heading())
+drive_general(520, 500, 35, True)
 
 #mission 13
 drive_general(10, -200, 35, True)
