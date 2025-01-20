@@ -6,7 +6,7 @@ from turn_general import turn_general
 
 drive_general(250, 250, 0, False)
 turn_general(-90)
-drive_general(80, -250, 0, False)
+drive_general(100, -250, 0, False)
 drive_general(600, 450, 0, False)
 turn_general(-90)
 left_arm_motor.run_angle(2500, -700, Stop.BRAKE,True)
@@ -15,10 +15,12 @@ left_arm_motor.run_angle(2500, -700, Stop.BRAKE,True)
 drive_general(140, 300, -90, True)
 
 left_arm_motor.run_angle(1800, 900, Stop.BRAKE, False)
-right_arm_motor.run_angle(6000, -2100, Stop.BRAKE,True)
+right_arm_motor.run_angle(400, -400, Stop.BRAKE,True)
+right_arm_motor.run_angle(4000, -1600, Stop.BRAKE,True)
+
 
 #return the arms
-right_arm_motor.run_angle(2000, 1100, Stop.BRAKE, True)
+right_arm_motor.run_angle(2000, 1500, Stop.BRAKE, True)
 left_arm_motor.run_angle(3000, -1000, Stop.BRAKE, True)
 drive_general(100, -350, -90, True)
 left_arm_motor.run_angle(3000, 600, Stop.BRAKE, True)
