@@ -1,6 +1,6 @@
 from pybricks.tools import hub_menu
 
-selected = hub_menu("1", "2", "3", "4", "5", "6", "7")
+selected = hub_menu("1", "2", "3", "4", "5", "6")
 
 if selected == "1":
     import run1
@@ -14,5 +14,3 @@ elif selected == "5":
     import run5
 elif selected == "6":
     import run6
-elif selected == "7":
-    import run7
