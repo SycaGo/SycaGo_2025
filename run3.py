@@ -13,7 +13,7 @@ drive_general(800, -350, 93, True)
 #put the scubadiver on the yellow line and click on the yellow
 left_arm_motor.run_angle(10000, 1000, Stop.BRAKE, True)
 left_arm_motor.run_angle(10000, -365, Stop.BRAKE, True)
-drive_general(300, 550, 0, False)
+drive_general(300, 550, 93, True)
 turn_general(-90)
 
 #drive straight to mission 6
@@ -23,7 +23,7 @@ drive_general(80, 150, -90, True)
 drive_general(130, 70, -90, True)
 
 #take the srimp
-right_arm_motor.run_angle(400, 400, Stop.BRAKE, True)
+right_arm_motor.run_angle(400, 450, Stop.BRAKE, True)
 
 #take the chest
 drive_general(100, -200, -90, True)
