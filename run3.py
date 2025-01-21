@@ -23,7 +23,7 @@ drive_general(80, 150, -90, True)
 drive_general(130, 70, -90, True)
 
 #take the srimp
-right_arm_motor.run_angle(400, 450, Stop.BRAKE, True)
+right_arm_motor.run_angle(350, 450, Stop.BRAKE, True)
 
 #take the chest
 drive_general(100, -200, -90, True)
