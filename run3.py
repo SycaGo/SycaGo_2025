@@ -28,4 +28,5 @@ right_arm_motor.run_angle(350, 450, Stop.BRAKE, True)
 #take the chest
 drive_general(100, -200, -90, True)
 turn_general(120)
-drive_general(440, 700, 120, True)
+drive_general(440, 1000, 120, True)
+
