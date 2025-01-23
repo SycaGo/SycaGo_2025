@@ -24,3 +24,23 @@ drive_general(150, -200 ,0, False)
 turn_general(-5)
 drive_general(150, -200 ,0, False)
 drive_general(50, 200 ,0, False)
+
+
+
+'''
+turn_general(-40)
+drive_general(70, 200 ,-40, True)
+
+#take the trident out
+turn_general(-45)
+
+#back to the wall
+drive_general(200, -2000 ,-45, True)
+
+#put the ship in her place
+turn_general(-55)
+drive_general(100, -250, 0, False)
+turn_general(-5)
+drive_general(140, -350, 0, False )
+drive_general(80, 350, 0, False )
+'''
