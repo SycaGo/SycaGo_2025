@@ -25,11 +25,12 @@ left_arm_motor.run_angle(3000, -1000, Stop.BRAKE, True)
 drive_general(100, -350, -90, True)
 left_arm_motor.run_angle(3000, 600, Stop.BRAKE, True)
 turn_general(80)
-drive_general(70, 300, 80, True)
+drive_general(50, 300, 80, True)
 
 #drop the shark
 left_arm_motor.run_angle(10000, -800, Stop.BRAKE, True)
 drive_general(35, -350, 80, True)
+left_arm_motor.run_angle(10000, -300, Stop.BRAKE, True)
 left_arm_motor.run_angle(10000, 900, Stop.BRAKE, True)
 
 #backward to the wall
