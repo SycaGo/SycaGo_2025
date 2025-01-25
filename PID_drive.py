@@ -3,10 +3,11 @@ from parameters import drive_base, hub, right_motor, left_motor, WHEEL_DIAMETER
 def calculate_distance():
     right_motor_angle = right_motor.angle()
     left_motor_angle = left_motor.angle()
-    P = WHEEL_DIAMETER * 3.14192
+    P = WHEEL_DIAMETER * 3.141592
     average_angle = (abs(right_motor_angle) + abs(left_motor_angle)) / 2
     distance_driven = ((average_angle / 360) * P)
     return distance_driven
+
 
 def drive(distance, speed, set_point, absolute=True):
     kp = 0.7
