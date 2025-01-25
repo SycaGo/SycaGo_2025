@@ -8,7 +8,7 @@ def calculate_distance():
     distance_driven = ((average_angle / 360) * P)
     return distance_driven
 
-def drive(distance, speed):
+def drive(distance, speed, set_point, absolute=True):
     set_point = 0
     kp = 1
     left_motor.reset_angle(0)
