@@ -9,7 +9,7 @@ drive_general(150, 200, 0, False)
 turn_general(-45)
 drive_general(200, 200, -45, True)
 turn_general(40)
-right_arm_motor.run_angle(300, -400, Stop.BRAKE, False)
+right_arm_motor.run_angle(300, -390, Stop.BRAKE, False)
 drive_general(300, 400, 40, True)
 wait(200)
 drive_general(180, 300, 40, True)
@@ -17,7 +17,7 @@ drive_general(180, 300, 40, True)
 #mission 11
 left_arm_motor.run_angle(600, -350, Stop.BRAKE, True)
 drive_general(40, 300, 40, True)
-left_arm_motor.run_angle(600, -350, Stop.BRAKE, True)
+left_arm_motor.run_angle(600, -500, Stop.BRAKE, True)
 
 # take shrimp and Plankton Sample
 drive_general(280, -300, 0, False)
