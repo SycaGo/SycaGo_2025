@@ -11,7 +11,7 @@ def calculate_distance():
     distance_driven = ((average_angle / 360) * P)
     return distance_driven
 
-def drive_general(distance, speed, set_point, absolute=True):
+def drive_general(distance, speed, set_point, absolute=True, kp = 0.7, kd = 2):
     kp = 0.7
     kd = 2
     left_motor.reset_angle(0)
@@ -28,7 +28,7 @@ def drive_general(distance, speed, set_point, absolute=True):
     max_speed = speed
 
     while distance_passed < distance:
-        if distance > 150:
+        if distance > 150 or speed != 1000 or speed != -1000:
             if distance_passed > deceleration_starting_position:
                 speed = (final_speed - max_speed) * ((distance_passed - deceleration_starting_position) / deceleration_range) + max_speed
         else:
