@@ -21,12 +21,4 @@ left_arm_motor.run_angle(1000, 300, Stop.BRAKE, True)
 #get out the trident
 drive_general(100, -400 ,40, True)
 turn_general(-72)
-drive_general(200, -400 ,0, False)
-turn_general(-69)
-drive_general(200, -350 ,0, False)
-turn_general(-2)
-
-#put the ship in her place
-drive_general(200, -350 ,0, False)
-drive_general(40, 300 ,0, False)
 
