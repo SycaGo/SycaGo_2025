@@ -2,14 +2,11 @@ from parameters import left_motor, right_motor, hub, drive_base
 from pybricks.parameters import Stop
 from pybricks.tools import wait
 
-def turn_general(turn_degrees, absolute=True, Kp = 8, Ki = 0.009, Kd = 2):
+def turn_general(turn_degrees, Kp = 8, Ki = 0.009, Kd = 2):
     error = turn_degrees - hub.imu.heading()
     integral = 0
     last_error = 0
-    scale = abs(turn_degrees / 10)
-
-    if not absolute:
-        hub.imu.reset_heading(0)    
+    scale = abs(turn_degrees / 10)  
 
     while abs(error) > 0.5:
         gyro = hub.imu.heading()
