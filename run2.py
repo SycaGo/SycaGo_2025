@@ -24,8 +24,13 @@ right_arm_motor.run_angle(2000, 1500, Stop.BRAKE, True)
 left_arm_motor.run_angle(3000, -1000, Stop.BRAKE, True)
 drive_general(120, -350, -180, True)
 left_arm_motor.run_angle(3000, 600, Stop.BRAKE, True)
+<<<<<<< HEAD
 turn_general(80, False)
 drive_general(50, 350, 80, True)
+=======
+turn_general(80)
+drive_general(70, 300, 80, True)
+>>>>>>> parent of a9513da (Update run2.py)
 
 #drop the shark
 left_arm_motor.run_angle(10000, -800, Stop.BRAKE, True)
