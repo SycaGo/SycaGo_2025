@@ -6,17 +6,17 @@ def turn_general(turn_degrees, Kp = 8, Ki = 0.009, Kd = 2):
     error = turn_degrees - hub.imu.heading()
     integral = 0
     last_error = 0
+    scale = abs(turn_degrees / 10)  
+
     while abs(error) > 0.5:
         gyro = hub.imu.heading()
         error = turn_degrees - gyro
         p = error * Kp
         d = (error - last_error) * Kd
-        integral += error
         correction = p + d
 
-        if abs(error) > 5:
-            integral = 0
-        elif abs(error) <= 5:
+        if gyro >= abs(turn_degrees) - scale:
+            integral += error
             i = integral * Ki
             correction = p + i + d
         last_error = error
