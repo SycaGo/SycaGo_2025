@@ -3,7 +3,7 @@ from pybricks.parameters import Stop
 from pybricks.tools import wait
 from turn_general import turn_general
 from drive_general import drive_general
-from line_alignment import line_alignment
+from white_stop import white_stop
 
 #mission 9
 drive_general(100, 350, 0, False)
@@ -22,8 +22,8 @@ drive_general(150, 500, -95, True)
 turn_general(-143)
 drive_general(400, 500, -143, True)
 drive_general(330, -500, -143, True)
-turn_general(20, False)
-line_alignment(250)
+turn_general(30, False)
+white_stop(400)
 turn_general(-5, False)
 drive_general(5, -200, 0, False)
 right_arm_motor.run_angle(10000, -850, Stop.BRAKE, True)
