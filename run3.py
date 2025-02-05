@@ -23,13 +23,14 @@ right_arm_motor.run_angle(350, 430, Stop.BRAKE, True)
 drive_general(180, -350, 90, True)
 
 # released the shrimp
-turn_general(183)
+turn_general(185)
+wait(500)
 right_arm_motor.run_angle(350, -400, Stop.BRAKE, True)
 
 #go backward to mission 3
-drive_general(380, -350, 183, True)
+drive_general(380, -350, 185, True)
 left_arm_motor.run_angle(10000, 1000, Stop.BRAKE, True)
-left_arm_motor.run_angle(10000, -1, Stop.BRAKE, True)
-drive_general(500, 1000, 183, True)
+left_arm_motor.run_angle(10000, -200, Stop.BRAKE, True)
+drive_general(500, 1000, 185, True)
 turn_general(50, False)
 drive_general(300, 1000, 50 , True)
