@@ -15,9 +15,9 @@ wait(200)
 drive_general(180, 300, -5, True)
 
 #mission 11
-left_arm_motor.run_angle(600, -350, Stop.BRAKE, True)
+left_arm_motor.run_angle(600, 350, Stop.BRAKE, True)
 drive_general(40, 300, -5, True)
-left_arm_motor.run_angle(600, -350, Stop.BRAKE, True)
+left_arm_motor.run_angle(600, 350, Stop.BRAKE, True)
 
 # take shrimp and Plankton Sample
 drive_general(280, -300, -5, True)
