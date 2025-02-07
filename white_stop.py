@@ -24,4 +24,5 @@ def white_stop(speed):
             drive_base.drive(speed, correction)
         if GOAL_REFLECTION -10 < right_motor_reflection < GOAL_REFLECTION +10:
             right_motor_stop = True
-            right_motor.stop()
+            right_motor.brake()
+            left_motor.brake()
