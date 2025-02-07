@@ -13,7 +13,7 @@ turn_general(90, False, Kp= 6)
 wait(100)
 
 #get up the toren
-drive_general(180, 110, 90, True)
+drive_general(150, 110, 90, True)
 drive_general(80, 50, 90, True)
 
 #take the srimp
@@ -26,9 +26,9 @@ drive_general(180, -350, 90, True)
 turn_general(185)
 wait(500)
 right_arm_motor.run_angle(350, -400, Stop.BRAKE, True)
-
 #go backward to mission 3
-drive_general(380, -350, 185, True)
+turn_general(93)
+drive_general(400, -350, 93, True)
 left_arm_motor.run_angle(10000, 1000, Stop.BRAKE, True)
 left_arm_motor.run_angle(10000, -200, Stop.BRAKE, True)
 drive_general(500, 1000, 185, True)
