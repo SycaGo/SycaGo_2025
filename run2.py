@@ -12,15 +12,15 @@ turn_general(-180)
 left_arm_motor.run_angle(2500, -710, Stop.BRAKE,True)
 
 #drive forward to mission 1 and take the scubadiver
-drive_general(140, 300, -180, True)
+drive_general(150, 300, -180, True)
 
-left_arm_motor.run_angle(1800, 880, Stop.BRAKE, False)
+left_arm_motor.run_angle(1800 , 950, Stop.BRAKE, False)
 right_arm_motor.run_angle(400, -400, Stop.BRAKE,True)
-right_arm_motor.run_angle(4000, -1600, Stop.BRAKE,True)
+right_arm_motor.run_angle(4000, -2000, Stop.BRAKE,True)
 
 
 #return the arms
-right_arm_motor.run_angle(2000, 1500, Stop.BRAKE, True)
+right_arm_motor.run_angle(2000, 2000, Stop.BRAKE, True)
 left_arm_motor.run_angle(3000, -1000, Stop.BRAKE, True)
 drive_general(120, -350, -180, True)
 left_arm_motor.run_angle(3000, 600, Stop.BRAKE, True)
