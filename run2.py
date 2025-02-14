@@ -4,21 +4,23 @@ from pybricks.tools import wait
 from drive_general import drive_general
 from turn_general import turn_general
 
-drive_general(400, 350, 0, False)
-right_arm_motor.run_angle(100, -150, Stop.BRAKE,True)
-right_arm_motor.run_angle(100, 70, Stop.BRAKE,True)
-drive_general(100, -400, 0, False)
+#put the coral on the yellow
+drive_general(250, 350, 0, False)
+left_arm_motor.run_angle(300, -80, Stop.BRAKE,True)
+drive_general(10, -100, 0, False)
+wait(50)
+left_arm_motor.run_angle(1000, -100, Stop.BRAKE,True)
+drive_general(180, 350, 0, False)
+turn_general(-10)
+left_arm_motor.run_angle(50, 80, Stop.BRAKE,True)
+drive_general(100, -200, -10, True)
+
+#free shark
 turn_general(60)
-drive_general(350, 400, 0, False)
-turn_general(-56)
-drive_general(200, 400, 0, False)
-turn_general(-55)
-drive_general(140, 400, 0, False)
-right_arm_motor.run_angle(600, 200, Stop.BRAKE,True)
+drive_general(300, 350, 60, True)
+turn_general(-10)
+drive_general(200, 350, -10, True)
+turn_general(-45)
+drive_general(10, 200, -45, True)
+left_arm_motor.run_angle(10000, 400, Stop.BRAKE,True)
 
-
-'''
-drive_general(90, 100, 0, False)
-right_arm_motor.run_angle(70, -60, Stop.BRAKE,True)
-drive_general(70, 100, 0, False)
-'''
