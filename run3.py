@@ -8,7 +8,7 @@ from turn_general import turn_general
 drive_general(120, 350, 0, False)
 turn_general(-90)
 wait(100)
-drive_general(390, 350, -90, True)
+drive_general(420, 350, -90, True)
 turn_general(90, False, Kp= 6)
 wait(100)
 
