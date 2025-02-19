@@ -6,10 +6,10 @@ from turn_general import turn_general
 
 #put the coral on the yellow
 drive_general(280, 350, 0, False)
-left_arm_motor.run_angle(300, -120, Stop.BRAKE,True)
+left_arm_motor.run_angle(320, -120, Stop.BRAKE,True)
 drive_general(10, -165, 0, False)
 wait(50)
-left_arm_motor.run_angle(6000, -345, Stop.BRAKE,True)
+left_arm_motor.run_angle(6000, -340, Stop.BRAKE,True)
 drive_general(180, 350, 0, False)
 turn_general(-10)
 left_arm_motor.run_angle(50, 80, Stop.BRAKE,True)
