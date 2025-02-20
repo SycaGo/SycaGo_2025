@@ -31,13 +31,16 @@ turn_general(-48)
 drive_general(140, 350, -48, True)
 
 #free the shark
-left_arm_motor.run_angle(10000, 635, Stop.BRAKE,True)
+left_arm_motor.run_angle(10000, 750, Stop.BRAKE,True)
 
 #go to mission 1
-drive_general(150, -350, -48, True)
+drive_general(140, -350, -48, True)
 left_arm_motor.run_angle(6000, -820, Stop.BRAKE,True)
 turn_general(-90)
 
 
 drive_general(130, 350, -90, True)
-right_arm_motor.run_angle(3000, -250, Stop.BRAKE,True)
+right_arm_motor.run_angle(6500, -450, Stop.BRAKE,True)
+drive_general(110, -350, -90, True)
+turn_general(-160)
+drive_general(700, 650, -160, True)
