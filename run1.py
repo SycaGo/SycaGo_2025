@@ -4,7 +4,7 @@ from pybricks.tools import wait
 from turn_general import turn_general
 from drive_general import drive_general
 
-# taking 2 corals shrimp and one sample
+# taking 2 corals and shrimp and water sample near the rd lanunch area
 drive_general(640, 500, 0, False)
 turn_general(24)
 
