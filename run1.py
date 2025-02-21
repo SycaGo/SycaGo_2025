@@ -18,10 +18,10 @@ drive_general(40, 200, 144, True)
 
 # take the sample
 left_arm_motor.run_angle(600, 280, Stop.BRAKE, True)
-
-# driving back to launch area
 drive_general(100, -400, 144, True)
 left_arm_motor.run_angle(300, -250, Stop.BRAKE, True)
+
+# driving back to launch area
 drive_general(50, 200, 0, False)
 turn_general(67)
 drive_general(250, 1000, 67, True)
