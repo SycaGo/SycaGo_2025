@@ -19,12 +19,11 @@ drive_general(100, -30 ,90, True)
 drive_general(20, -300 ,90, True)
 
 # drive to trident
-turn_general(-60, False)
-drive_general(200, 350 ,-60, True)
+turn_general(-52, False)
+drive_general(220, 350 ,-52, True)
 turn_general(40, False)
 
 # take out the trident
 left_arm_motor.run_angle(1000, 300, Stop.BRAKE, True)
-drive_general(150, -1000 ,40, True)
-
+drive_general(250, -1000 ,40, True)
 # TAKE THE ROBOT MANUALLY FROM HERE
