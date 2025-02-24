@@ -14,12 +14,11 @@ left_arm_motor.run_angle(320, -350, Stop.BRAKE,True)
 left_arm_motor.run_angle(6000, -380, Stop.BRAKE,False)
 drive_general(30, -165, 0, True)
 
-#put the coral on the rack
 wait(50)
 drive_general(165, 300, 0, True)
 turn_general(20)
 
-#exit from the rack after putting the coral
+#put the coral on the yellow
 left_arm_motor.run_angle(6000, 320, Stop.BRAKE,True)
 drive_general(40, -250, 20, True)
 
@@ -39,11 +38,9 @@ drive_general(140, -350, -48, True)
 left_arm_motor.run_angle(6000, -820, Stop.BRAKE,True)
 turn_general(-90)
 
-#pushing the coral buds 
+
 drive_general(130, 350, -90, True)
-#take the diver
-right_arm_motor.run_angle(6500, -450, Stop.BRAKE,True)
+right_arm_motor.run_angle(4500, -230, Stop.BRAKE,True)
 drive_general(110, -350, -90, True)
-#return to the base
-turn_general(-160)
-drive_general(700, 650, -160, True)
+turn_general(-148)
+drive_general(600, 650, -148, True)
