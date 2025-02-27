@@ -26,22 +26,22 @@ left_arm_motor.run_angle(600, 500, Stop.BRAKE, True)
 # take shrimp near whale
 drive_general(220, -300, -5, True)
 right_arm_motor.run_angle(1000, -500, Stop.BRAKE, True)
-turn_general(33, False)
+turn_general(28)
 
 # take plankton sample
-drive_general(40, 400, 33, True)
-turn_general(73)
-drive_general(10, 300, 73, True)
+drive_general(40, 400, 28, True)
+turn_general(68)
+drive_general(10, 300, 68, True)
 right_arm_motor.run_angle(600, 400, Stop.BRAKE, True)
 
 # arrive to the octupos
-drive_general(60, -450, 73, True)
-turn_general(-80, False)
-drive_general(370, -500, -80, True)
-turn_general(-120)
+drive_general(60, -450, 68, True)
+turn_general(-12)
+drive_general(370, -500, -12, True)
+turn_general(-52)
 
 #octupos
-drive_general(250, 500, -120, True)
+drive_general(250, 300, -52, True)
 
 #go home
-drive_general(500, -1000, -120, True)
+drive_general(500, -1000, -52, True)
