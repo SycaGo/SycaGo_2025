@@ -22,8 +22,8 @@ drive_general(100, -400, 144, True)
 left_arm_motor.run_angle(300, -250, Stop.BRAKE, True)
 
 # driving back to launch area
-drive_general(50, 200, 0, False)
-turn_general(67)
-drive_general(250, 1000, 67, True)
-turn_general(-35, False)
-drive_general(660, 1000, -35, True)
+drive_general(50, 200, 144, True)
+turn_general(211)
+drive_general(250, 1000, 211, True)
+turn_general(176)
+drive_general(660, 1000, 176, True)
