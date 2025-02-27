@@ -19,9 +19,9 @@ drive_general(100, -30 ,90, True)
 drive_general(20, -300 ,90, True)
 
 # drive to trident
-turn_general(-52, False)
-drive_general(220, 350 ,-52, True)
-turn_general(40, False)
+turn_general(38)
+drive_general(220, 350 ,38, True)
+turn_general(78)
 
 # take out the trident
 left_arm_motor.run_angle(1000, 300, Stop.BRAKE, True)
