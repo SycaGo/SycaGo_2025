@@ -4,34 +4,43 @@ from pybricks.tools import wait
 from drive_general import drive_general
 from turn_general import turn_general
 
-drive_general(250, 250, 0, False)
+#run from the base to the coral
+drive_general(280, 340, 0, False)
+
+#catch the ring
+left_arm_motor.run_angle(320, -350, Stop.BRAKE,True)
+
+#take the coral
+left_arm_motor.run_angle(6000, -380, Stop.BRAKE,False)
+drive_general(30, -165, 0, True)
+
+wait(50)
+drive_general(165, 300, 0, True)
+turn_general(20)
+
+#put the coral on the yellow
+left_arm_motor.run_angle(6000, 320, Stop.BRAKE,True)
+drive_general(40, -250, 20, True)
+
+#drive to the next mission
+turn_general(70)
+drive_general(280, 350, 70, True)
+turn_general(25)
+drive_general(180, 350, 25, True)
+turn_general(-48)
+drive_general(140, 350, -48, True)
+
+#free the shark
+left_arm_motor.run_angle(10000, 750, Stop.BRAKE,True)
+
+#go to mission 1
+drive_general(140, -350, -48, True)
+left_arm_motor.run_angle(6000, -820, Stop.BRAKE,True)
 turn_general(-90)
-drive_general(100, -250, -90, True)
-drive_general(600, 450, -90, True)
-turn_general(-180)
-left_arm_motor.run_angle(2500, -710, Stop.BRAKE,True)
-
-#drive forward to mission 1 and take the scubadiver
-drive_general(140, 300, -180, True)
-
-left_arm_motor.run_angle(1800, 880, Stop.BRAKE, False)
-right_arm_motor.run_angle(400, -400, Stop.BRAKE,True)
-right_arm_motor.run_angle(4000, -1600, Stop.BRAKE,True)
 
 
-#return the arms
-right_arm_motor.run_angle(2000, 1500, Stop.BRAKE, True)
-left_arm_motor.run_angle(3000, -1000, Stop.BRAKE, True)
-drive_general(120, -350, -180, True)
-left_arm_motor.run_angle(3000, 600, Stop.BRAKE, True)
-turn_general(80, False)
-drive_general(50, 350, 80, True)
-
-#drop the shark
-left_arm_motor.run_angle(10000, -800, Stop.BRAKE, True)
-drive_general(35, -350, 80, True)
-left_arm_motor.run_angle(10000, 900, Stop.BRAKE, True)
-
-#backward to the wall
-turn_general(40, False)
-drive_general(730, -1000, 40, True)
+drive_general(130, 350, -90, True)
+right_arm_motor.run_angle(4500, -230, Stop.BRAKE,True)
+drive_general(110, -350, -90, True)
+turn_general(-148)
+drive_general(600, 650, -148, True)
