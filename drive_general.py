@@ -4,9 +4,10 @@ from pybricks.tools import wait
 
 
 def calculate_distance():
+    PI = 3.141592
     right_motor_angle = right_motor.angle()
     left_motor_angle = left_motor.angle()
-    P = WHEEL_DIAMETER * 3.141592
+    P = WHEEL_DIAMETER * PI
     average_angle = (abs(right_motor_angle) + abs(left_motor_angle)) / 2
     distance_driven = ((average_angle / 360) * P)
     return distance_driven
