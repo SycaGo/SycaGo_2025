@@ -12,8 +12,6 @@ def calculate_distance():
     return distance_driven
 
 def drive_general(distance, speed, set_point, absolute=True, kp = 0.7, kd = 2):
-    kp = 0.7
-    kd = 2
     left_motor.reset_angle(0)
     right_motor.reset_angle(0)
     last_error = 0
