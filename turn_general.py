@@ -11,12 +11,13 @@ def turn_general(turn_degrees, absolute=True, Kp = 8, Ki = 0.017, Kd = 2):
         hub.imu.reset_heading(0)    
 
     while abs(error) > 0.5:
+        anti_windup = 5
         gyro = hub.imu.heading()
         error = turn_degrees - gyro
         p = error * Kp
         d = (error - last_error) * Kd
 
-        if abs(error) > 5:
+        if abs(error) > anti_windup:
             integral = 0
         else:
             integral += error
