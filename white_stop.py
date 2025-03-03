@@ -2,6 +2,7 @@ from parameters import left_motor, right_motor, right_color_sensor, left_color_s
 from pybricks.parameters import Stop
 from pybricks.tools import wait
 
+# white stop function
 def white_stop(speed):
     hub.imu.reset_heading(0)
     set_point = 0
@@ -15,13 +16,19 @@ def white_stop(speed):
     right_motor_stop = False
     while right_motor_stop == False:
         right_motor_reflection = right_color_sensor.reflection()
+
+        # drive condition
         if left_motor_reflection < GOAL_REFLECTION+10:
             left_motor_reflection = left_color_sensor.reflection()
             error = set_point - hub.imu.heading()
+
+            # PD part
             p = error * kp
             d = (error - last_error) * kd
             correction = p + d
             drive_base.drive(speed, correction)
+
+        # Stop condition
         if GOAL_REFLECTION -10 < right_motor_reflection < GOAL_REFLECTION +10:
             right_motor_stop = True
             right_motor.brake()
