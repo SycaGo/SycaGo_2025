@@ -11,7 +11,9 @@ def calculate_distance():
     distance_driven = ((average_angle / 360) * P)
     return distance_driven
 
-def drive_general(distance, speed, set_point, absolute=True, kp = 0.7, kd = 2):
+def drive_general(distance, speed, direction_angle, absolute=True, kp = 0.7, kd = 2):
+    # distance is in millimeters
+    # speed is in degrees (rotations) per second
     left_motor.reset_angle(0)
     right_motor.reset_angle(0)
     last_error = 0
@@ -32,7 +34,7 @@ def drive_general(distance, speed, set_point, absolute=True, kp = 0.7, kd = 2):
         else:
             speed = max_speed
         distance_passed = calculate_distance()
-        error = set_point - hub.imu.heading()
+        error = direction_angle - hub.imu.heading()
         p = error * kp
         d = (error - last_error) * kd
         correction = p + d            
