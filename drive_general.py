@@ -8,6 +8,7 @@ def calculate_distance():
     P = WHEEL_DIAMETER * PI
     right_motor_angle = right_motor.angle()
     left_motor_angle = left_motor.angle()
+    # reduce error by sqrt(2) by averaging 2 motor sensors
     average_angle = (abs(right_motor_angle) + abs(left_motor_angle)) / 2
     distance_driven = ((average_angle / 360) * P)
     return distance_driven
