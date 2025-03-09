@@ -19,10 +19,10 @@ wait(100)
 
 #get up the toren
 drive_general(150, 110, 0, True)
-drive_general(70, 50, 0, True)
+drive_general(50, 50, 0, True)
 
 #take the srimp/ krill
-right_arm_motor.run_angle(550, 800, Stop.BRAKE, True)
+right_arm_motor.run_angle(550,1000, Stop.BRAKE, True)
 
 #take the chest
 drive_general(140, -350, 0, True)
