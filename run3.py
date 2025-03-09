@@ -22,7 +22,7 @@ drive_general(150, 110, 0, True)
 drive_general(70, 50, 0, True)
 
 #take the srimp/ krill
-right_arm_motor.run_angle(350, 800, Stop.BRAKE, True)
+right_arm_motor.run_angle(550, 800, Stop.BRAKE, True)
 
 #take the chest
 drive_general(140, -350, 0, True)
@@ -30,7 +30,7 @@ drive_general(140, -350, 0, True)
 # release the shrimp in launch area
 turn_general(93)
 wait(500)
-right_arm_motor.run_angle(500, -550, Stop.BRAKE, True)
+right_arm_motor.run_angle(700, -550, Stop.BRAKE, True)
 
 #go backwards to the coral reef and the scuba diver hanger
 drive_general(360, -350, 93, True)
