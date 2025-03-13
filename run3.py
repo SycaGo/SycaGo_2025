@@ -17,8 +17,8 @@ turn_general(0)
 wait(100)
 
 #get up the toren
-drive_general(150, 110, 0, True)
-drive_general(50, 50, 0, True)
+drive_general(160, 110, 0, True)
+drive_general(70, 50, 0, True)
 
 #take the srimp/ krill
 right_arm_motor.run_angle(300, 400, Stop.BRAKE, True)
