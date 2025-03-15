@@ -13,6 +13,7 @@ AXLE_TRACK = 110
 drive_base = DriveBase(left_motor, right_motor, WHEEL_DIAMETER, AXLE_TRACK)
 drive_base.use_gyro(True)
 
+# left/right_arm_motor.run_angle(speed_deg/s, rotation_angle_deg, Stop.BRAKE, wait(bool))
 left_arm_motor = Motor(Port.D, Direction.COUNTERCLOCKWISE)
 right_arm_motor = Motor(Port.C)
 
