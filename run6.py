@@ -42,3 +42,5 @@ wait(1000)
 # place the unidentifled creature
 turn_general(25)
 drive_general(30, -300, 25, True)
+turn_general(-5)
+drive_general(20, 300,-5, True)
