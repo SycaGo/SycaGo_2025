@@ -39,7 +39,7 @@ turn_general(-90)
 
 # free the diver
 drive_general(130, 350, -90, True)
-right_arm_motor.run_angle(500, -230, Stop.BRAKE,True)
+right_arm_motor.run_angle(300, -150, Stop.BRAKE,True)
 drive_general(110, -350, -90, True)
 
 # back to launch area
