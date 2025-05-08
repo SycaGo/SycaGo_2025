@@ -40,7 +40,4 @@ right_arm_motor.run_angle(10000, -850, Stop.BRAKE, True)
 wait(1000)
 
 # place the unidentifled creature
-turn_general(25)
-drive_general(30, -300, 25, True)
-turn_general(-5)
-drive_general(20, 300,-5, True)
+drive_general(30, -300, 20, True)
